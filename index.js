@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
  app.get('/about',(req,res)=>{
   res.sendFile(path.resolve('pages/about.html'))
 })
-api.getMenu()
+api.getMenu
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
