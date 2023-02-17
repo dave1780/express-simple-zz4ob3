@@ -5,7 +5,7 @@ const path = require('path');
 
 app.use(express.static('static'));
 
-app.get('/', (req, res) => {
+app.get('/home', (req, res) => {
   res.sendFile(path.resolve('pages/index.html'));
 });
 app.get('/about',(req,res)=>{
