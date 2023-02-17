@@ -8,10 +8,9 @@ app.use(express.static('static'));
 app.get('/', (req, res) => {
   res.sendFile(path.resolve('pages/index.html'));
 });
-const getData = ()=>{ app.get('/about',(req,res)=>{
+ app.get('/about',(req,res)=>{
   res.sendFile(path.resolve('pages/about.html'))
-})}
+})
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
-module.exports= getData;
