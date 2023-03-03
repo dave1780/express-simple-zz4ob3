@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const port = 3010;
 const path = require('path');
-const api= require("./Api.js")
 
 app.use(express.static('static'));
 
@@ -12,7 +11,9 @@ app.get('/', (req, res) => {
  app.get('/about',(req,res)=>{
   res.sendFile(path.resolve('pages/about.html'))
 })
-api.getMenu
+app.get("/menu/:name",(req,res)=>{
+  console.log(req.params.name)
+})
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
