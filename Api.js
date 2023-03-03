@@ -5,4 +5,4 @@ const getMenu= ()=>{
   res.send("we are on shop")
 })}
 getMenu()
-module.exports= {getMenu};
+module.exports= getMenu
