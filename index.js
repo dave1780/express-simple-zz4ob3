@@ -13,6 +13,7 @@ app.get('/', (req, res) => {
 })
 app.get("/menu/:name",(req,res)=>{
   console.log(req.params.name)
+  res.send("we are on menu")
 })
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
