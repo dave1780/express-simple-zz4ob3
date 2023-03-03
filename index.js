@@ -11,12 +11,11 @@ app.get('/', (req, res) => {
  app.get('/about',(req,res)=>{
   res.sendFile(path.resolve('pages/about.html'))
 })
-app.get("/menu/:name",(req,res)=>{
-  const name= req.params.name.toUpperCase();
-  if(name==="BLOG"){
+app.get("/menu",(req,res)=>{
+  
     console.log(req.body)
     res.sendFile(path.resolve("./package-lock.json"))
-  }
+  
 })
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
