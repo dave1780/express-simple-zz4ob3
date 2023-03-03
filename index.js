@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3010;
 const path = require('path');
-
+const fs =require("fs")
 app.use(express.static('static'));
 
 app.get('/', (req, res) => {
@@ -12,8 +12,11 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve('pages/about.html'))
 })
 app.get("/menu/:name",(req,res)=>{
-  console.log(req.params.name)
-  res.send("we are on menu")
+  const name= req.params.name.toUpperCase();
+  if(name==="BLOG"){
+   let data = fs.readFile("./package.json")
+    res.send(data)
+  }
 })
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
