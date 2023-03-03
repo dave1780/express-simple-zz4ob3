@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 app.get("/menu/:name",(req,res)=>{
   const name= req.params.name.toUpperCase();
   if(name==="BLOG"){
-   res.sendFile(path.resolve('./package.json'))
+   res.sendFile(JSON.stringify(path.resolve('./package.json')))
   }
 })
 app.listen(port, () => {
