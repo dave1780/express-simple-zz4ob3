@@ -6,7 +6,7 @@ const shop =require("./Api.js")
 const Router =require("./routes.js")
 app.use(express.static('static'));
 
-app.use(Router)
+app.use("/rotes",Router)
 app.get('/', (req, res) => {
   res.sendFile(path.resolve('pages/index.html'));
 });
