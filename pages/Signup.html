@@ -8,18 +8,30 @@
   <style>
     form{
 
-      margin-top:20;
+      margin-top:20%;
       margin-left:5%;
       border:0.5px solid black;
       width:400px;
       height:300px;
+      border-radius:5%;
+      background-color : snow;
     }
     .Signup{
      display:grid;
      justify-content:center;
      grid-template-columns:1fr;
+     grid-auto-rows: 30px;
      margin-left:6%;
      margin-right:6%;
+    }
+    h2{
+      display:grid;
+      justify-content: center;
+    }
+    button{
+      background-color:lime;
+      border-radius:5%;
+      border:0.5px solid lime;
     }
   </style>
 </head>
@@ -27,11 +39,11 @@
    <form >
      <h2>Signup</h2>
      <div class="Signup">
-       <input type="text" placeholder="Username">
+       <input type="text" placeholder="Username" required/>
        <br>
-       <input type="text" placeholder="Email">
+       <input type="text" placeholder="Email" required/>
        <br>
-       <input type="text" placeholder="Password">
+       <input type="text" placeholder="Password" required/>
        <br>
        <button method="POST">Signup</button>
      </div>
