@@ -5,6 +5,7 @@ const path = require('path');
 const shop =require("./Api.js")
 const Router =require("./routes.js")
 app.use(express.static('static'));
+const fsm = require("./Signup.js")
 
 app.use("/",Router)
 app.get('/', (req, res) => {

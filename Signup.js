@@ -1,9 +1,13 @@
 const fs = require("fs")
+const bodyParser=require("body-parser")
+const jsonString = bodyParser.parse(req.body)
 let data= {
-  username:req.body.username,
-  email:req.body.email,
-  password:req.body.p
+  username:jsonString.username,
+  email:jsonString.email,
+  password:jsonString.p
 }
-fs.writeFile("./Fs.json",data,(err)=>{
+
+const fsm = fs.writeFile("./Fs.json",data,(err)=>{
   console.log(err)
 })
+module.exports= fsm;
