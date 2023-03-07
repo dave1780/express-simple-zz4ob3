@@ -1,73 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Signup</title>
-  <style>
-    form{
-
-      margin-top:20%;
-      margin-left:5%;
-      border:0.5px solid black;
-      width:400px;
-      height:300px;
-      border-radius:5%;
-      background-color : snow;
-    }
-    .Signup{
-     display:grid;
-     justify-content:center;
-     grid-template-columns:1fr;
-     grid-auto-rows: 30px;
-     margin-left:6%;
-     margin-right:6%;
-    }
-    h2{
-      display:grid;
-      justify-content: center;
-    }
-    button{
-      background-color:lime;
-      border-radius:5%;
-      border:0.5px solid lime;
-    }
-  </style>
-</head>
-<body>
-   <form >
-     <h2>Signup</h2>
-     <div class="Signup">
-       <input class="use" type="text" placeholder="Username" required/>
-       <br>
-       <input class="email" type="text" placeholder="Email" required/>
-       <br>
-       <input  class="p" type="text" placeholder="Password" required/>
-       <br>
-       <button class="s" method="POST">Signup</button>
-     </div>
-   </form>
-   <script>
-     let email= document.querySlector(".email")
-     let user= document.querySlector(".use");
-     let p=document.querySelector(".p")
-     let s=document.querySlector(".s")
-     s.onclick= asyn()=>{
-       fetch("../Signup.js",{
-         metnod:"POST",
-         header:"application/json",
-         body:{
-           username:use,
-           email:email,
-           p:p
-         }
-       }).then((res)=>{
-         console.log(res)
-         return res.text();
-       })
-     }
-   </script>
-   
-</body>
-</html>
+const fs = require("fs")
+let data= {
+  username:req.body.username,
+  email:req.body.email
+}
+fs.writeFile("./Fs.json",data,(err)=>{
+  console.log(err)
+})
