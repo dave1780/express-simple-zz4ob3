@@ -12,6 +12,7 @@ Router.get("/menu",(req,res,next)=>{
 
   Router.get("/Signup",(req,res,next)=>{
     res.sendFile(path.resolve("pages/Signup.html"))
+    
   })
 
 
