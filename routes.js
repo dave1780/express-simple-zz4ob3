@@ -1,6 +1,6 @@
 const express =require("express")
 const Router = express.Router()
- 
+ const path=require("path")
 Router.get("/menu",(req,res,next)=>{
     res.end("you are on menu page")
     next();
