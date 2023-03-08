@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve('pages/index.html'));
 });
 app.post("/re",(req,res)=>{
-  res.end(req)
+  res.end(req.e.target.value)
 })
  app.get('/about',(req,res)=>{
   res.sendFile(path.resolve('pages/about.html'))
