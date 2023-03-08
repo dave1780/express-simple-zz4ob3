@@ -12,6 +12,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve('pages/index.html'));
 });
 app.post("/re",(req,res)=>{
+  console.log(req)
   res.redirect("/about")
 })
  app.get('/about',(req,res)=>{
