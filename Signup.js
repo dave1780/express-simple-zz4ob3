@@ -1,14 +1,12 @@
 const fs = require("fs")
 const bodyParser=require("body-parser")
 const express = require("express")
-const jsonString = bodyParser.parse(req.body)
-let data= {
-  username:jsonString.username,
-  email:jsonString.email,
-  password:jsonString.p
-}
+const app= express();
+app.use(bodyParser.json());
 
-const fsm = fs.writeFile("./Fs.json",data,(err)=>{
-  console.log(err)
+app.use(bodyParser.urlencoded({extended:true}))
+
+ const signup = app.post("/Signup",(req,res)=>{
+  console.log(req.body)
 })
-module.exports= fsm;
+module.exports= signup;

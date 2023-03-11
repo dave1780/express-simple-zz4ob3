@@ -7,13 +7,15 @@
   <title>Signup</title>
 </head>
 <body>
-  <input type="text" class="username" />
+<form action="/Signup">
+  <input type="text" class="username" name="username"/>
   <br/>
-  <input type="text" class="email"/>
+  <input type="text" class="email" name="email"/>
   <br>
-  <input type="text" class="password"/>
+  <input type="text" class="password" name="password"/>
   <br>
-  <button class="signup">Signup</button>
+  <button class="signup" method="POST">Signup</button>
+</form>
   <script>
     let username =document.querySlector(".username")
 let email= document.querySelector(".email")
