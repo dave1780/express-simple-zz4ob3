@@ -4,9 +4,11 @@ const port = 3010;
 const path = require('path');
 const Router = require('./routes.js');
 const bodyParser= require("body-parser")
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('static'));
+
 app.use('/', Router);
 
 app.get('/', (req, res) => {
