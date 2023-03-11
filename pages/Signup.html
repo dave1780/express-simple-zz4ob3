@@ -5,10 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Signup</title>
-  <link href="/dist/Signup.css" rel="stylesheet">
+  <link href="CSS/Signup.css" rel="stylesheet">
 </head>
 <body>
-<form action="/Signup">
+<form action="/Signup" class="form">
+  <div class="formdata">
   <input type="text" class="username" name="username"/>
   <br/>
   <input type="text" class="email" name="email"/>
@@ -16,6 +17,7 @@
   <input type="text" class="password" name="password"/>
   <br>
   <button class="signup" method="POST">Signup</button>
+  </div>
 </form>
   <script>
     let username =document.querySlector(".username")

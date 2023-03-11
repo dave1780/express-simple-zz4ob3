@@ -1,19 +1,14 @@
-const express =require("express")
-const Router = express.Router()
- const path=require("path")
-Router.get("/menu",(req,res,next)=>{
-    res.end("you are on menu page")
-    next();
-  });
-  Router.get("/syop",(req,res,next)=>{
-    res.end("you are on syop")
-    next();
-  });
+const express = require('express');
+const Router = express.Router();
+const path = require('path');
 
-  Router.get("/Signup",(req,res,next)=>{
-    res.sendFile(path.resolve("pages/Signup.html"))
-    
-  })
+Router.get('/Signup', (req, res, next) => {
+  res.sendFile(path.resolve('pages/Signup.html'));
+  next();
+});
+Router.post('/Signup', (req, res, next) => {
+  console.log(req.body);
+  next();
+});
 
-
-module.exports= Router
+module.exports = Router;
