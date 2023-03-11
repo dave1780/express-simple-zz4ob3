@@ -22,19 +22,7 @@ let email= document.querySelector(".email")
 let password =document.querySelector(".password")
 let signup =document.querySelector(".signup")
 
-signup.onclick= async ()=>{
-  await fetch("../Signup.js",{
-    method:"POST",
-    header:"application/json",
-    body:{
-      username:username,
-      email:email,
-      password:password
-    }
-  }).then((res)=>{
-    console.log(res)
-  })
-}
+
   </script>
 </body>
 </html>
