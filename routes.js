@@ -2,13 +2,16 @@ const express = require('express');
 const Router = express.Router();
 const path = require('path');
 
-Router.get('/Signup', (req, res, next) => {
+Router.get('/Signup', (req, res) => {
   res.sendFile(path.resolve('pages/Signup.html'));
-  next();
+
 });
-Router.post('/Signup', (req, res, next) => {
+Router.post('/Signup', (req, res) => {
   console.log(req.body);
-  next();
+  
 });
+Router.get('/',(req,res)=>{
+  res.sendFile(path.resolve("pages/index.html"))
+})
 
 module.exports = Router;
