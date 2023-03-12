@@ -7,13 +7,13 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.static("static"))
 
 app.get("/Signup",(req,res)=>{
-res.sendFile(path.resolve("pages/index.html"))
+res.sendFile(path.resolve("pages/Signup.js"))
 })
 app.post("/Signup",(req,res)=>{
   console.log(req.body.username)
 })
 app.get("/",(req,res)=>{
-  res.end("yor windididh")
+  res.sendFile(path.resolve("pages/index.html"))
 })
 
 app.listen(3010,()=>{
