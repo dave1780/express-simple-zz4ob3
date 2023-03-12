@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.static("static"))
 
 app.get("/Signup",(req,res)=>{
-res.sendFile(path.resolve("pages/Signup.js"))
+res.sendFile(path.resolve("pages/Signup.html"))
 })
 app.post("/Signup",(req,res)=>{
   console.log(req.body.username)
