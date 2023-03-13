@@ -19,9 +19,10 @@ app.post("/Signup",(req,res)=>{
   }
   console.log(data)
   const newData=JSON.stringify(data)
-  const cipherData= CryptoJS.AES.encrypt(newData,"@#+×%").toString()
+  const cipherData= CryptoJS.AES.encrypt(data,"@#+×%").toString()
   //const token = jwt.sign({data:data},'hdido');
   console.log(cipherData)
+
 })
 app.get("/",(req,res)=>{
   res.sendFile(path.resolve("pages/index.html"))
