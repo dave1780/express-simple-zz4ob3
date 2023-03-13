@@ -3,6 +3,7 @@ const app= express()
 const bodyParser= require("body-parser")
 const path=require("path")
 const jwt =require("jsonwebtoken")
+const CryptoJS= require("crypto-js")
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.static("static"))
@@ -16,8 +17,10 @@ app.post("/Signup",(req,res)=>{
     email:req.body.email,
     password : req.body.password
   }
+  console.log(data)
+  const cipherData= CryptoJS.AES.encrypt(data,"@#+×%")
   //const token = jwt.sign({data:data},'hdido');
-  console.log(token)
+  console.log(cipherData)
 })
 app.get("/",(req,res)=>{
   res.sendFile(path.resolve("pages/index.html"))
