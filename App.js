@@ -19,8 +19,8 @@ app.post("/Signup",(req,res)=>{
   }
   console.log(data)
   const newData=JSON.stringify(data)
+  const token= jwt.sign({payload:data},"sajsis")
   const cipherData= CryptoJS.AES.encrypt(newData,"@#+×%").toString()
-  //const token = jwt.sign({data:data},'hdido');
   console.log(cipherData)
 
 })
