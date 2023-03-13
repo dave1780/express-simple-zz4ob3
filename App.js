@@ -16,7 +16,7 @@ app.post("/Signup",(req,res)=>{
     email:req.body.email,
     password : req.body.password
   }
-  const token = jwt.sign({data:data},"sand123")
+  const token = jwt.sign({data:data},'hdido');
   console.log(token)
 })
 app.get("/",(req,res)=>{
